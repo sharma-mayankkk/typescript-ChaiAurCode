@@ -16,7 +16,7 @@ let bookString = '{"name": "Fire and Blood"}'
 // `as book` tells TypeScript what type the object should have.
 let bookOject = JSON.parse(bookString) as book
 
-console.log(bookOject.name)
+console.log(bookOject.name) 
 
 
 // Tell TypeScript that this DOM element is an HTML input element.
