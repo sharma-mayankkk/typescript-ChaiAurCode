@@ -6,8 +6,8 @@ const ratings: Array<number> = [4.1,4.2, 4.3]
 
 //custom datatype
 
-type Chai = {name:string; price: number;}
-
+type Chai = {name:string; price: number;} 
+ 
 const menu: Chai[] = [
     {name: "Masala", price: 25},
     {name: "adrak", price: 20},
