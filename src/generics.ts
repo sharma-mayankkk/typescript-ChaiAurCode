@@ -2,7 +2,7 @@ function wrapInArray<T>(item: T): T[] {
     return [item]
 }
 
-wrapInArray('masala')
+wrapInArray('masala') 
 wrapInArray(42)
 wrapInArray({ flavour: 'ginger' })
 
