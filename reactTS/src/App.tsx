@@ -2,12 +2,14 @@ import { ChaiCard } from "./components/ChaiCard.tsx"
 import { Counter } from "./components/Counter.tsx"
 import type { Chai } from "./type.ts"
 import { ChaiList } from "./components/ChaiList.tsx"
+import { OrderForm } from "./components/OrderForm.tsx"
+import { Card } from "./components/Card.tsx"
 
 const menu: Chai[] = [
-  {id: 1, name: 'masala', price: 30},
-  {id: 2, name: 'Ginger', price: 50},
-  {id: 3, name: 'garlic', price: 60},
-  {id: 4, name: 'samosa', price: 70}
+  { id: 1, name: 'masala', price: 30 },
+  { id: 2, name: 'Ginger', price: 50 },
+  { id: 3, name: 'garlic', price: 60 },
+  { id: 4, name: 'samosa', price: 70 }
 ]
 
 function App() {
@@ -20,11 +22,24 @@ function App() {
       </div>
 
       <div>
-        <Counter/>
+        <Counter />
       </div>
 
       <div>
-        <ChaiList items={menu}/>
+        <ChaiList items={menu} />
+      </div>
+
+      <div>
+        <OrderForm onSubmit={(order) => {
+          console.log('placed ', order.name, order.cups)
+        }} />
+      </div>
+
+      <div>
+        <Card
+          title="Chai Aur TS"
+          footer={<button>Order now</button>}
+        />
       </div>
 
     </>
